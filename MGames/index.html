@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+ 
 </head>
 <body>
     <!-- navbar -->  
@@ -18,9 +18,9 @@
      </button>
      <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
       <li class="nav-item">
-          <a class="nav-link" data-value="login" href="#">Войти</a>        </li>  
+          <a class="nav-link" data-value="login" href="/auth.html">Войти</a>        </li>  
      <li class="nav-item"> 
-      <a class="nav-link " data-value="contact" href="#">Контаты</a>       </li> 
+      <a class="nav-link " data-value="contact" href="/about.html">Контаты</a>       </li> 
      </ul> 
      </div>
    </nav>
@@ -29,50 +29,93 @@
    <div class="container">
       <class class="row">
 
-         <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-               <img src="img/snake.jpg" width="80" height="140" class="card-img-top" alt="...">
-               <div class="card-body">
-                  <h5 class="card-title">Змейка </h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Играть</a>
+         <div class="col-md-4 "> 
+            <a href="#" >
+            <div class="card">
+               <div class="hover ehover10">
+                  <img class="card-img-top" width="80" height="140" src="/img/tetris.jpg" alt="">
+                  <div class="card-body">
+                     <div class="overlay">
+                           <h5 class="card-title">Тетрис </h5>
+                           <p class="card-text">Складывайте фигурки вряд, чтобыsssssssssssssssssssssssssss они уничтожались. Главное - не выйти за предлы экрана</p>
+                           <button class="play point" data-toggle="modal" data-target="#modal10">Играть
+                           </button>
+                           
+                     </div>
+                  </div> 
                </div>
             </div>
+            </a>
          </div>
 
-         <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-               <img src="img/tetris.jpg" width="80" height="140" class="card-img-top" alt="...">
-               <div class="card-body">
-                  <h5 class="card-title">Тетрис </h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Играть</a>
+         <div class="col-md-4 "> 
+            <a href="#" >
+            <div class="card">
+               <div class="hover ehover10">
+                  <img class="card-img-top" width="80" height="140" src="/img/rects.jpg" alt="">
+                  <div class="card-body">
+                     <div class="overlay">
+                           <h5 class="card-title">Квадраты </h5>
+                           <p class="card-text">Веселые квардраты</p>
+                           <button class="play point" data-toggle="modal" data-target="#modal10">Играть
+                           </button>
+                           
+                     </div>
+                  </div> 
                </div>
             </div>
+            </a>
          </div>
 
-         <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-               <img src="img/rects.jpg" width="80" height="140" class="card-img-top" alt="...">
-               <div class="card-body">
-                  <h5 class="card-title">Квадраты </h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Играть</a>
+         <div class="col-md-4 "> 
+            <a href="#" >
+            <div class="card">
+               <div class="hover ehover10">
+                  <img src="/img/snake.jpg" class="card-img-top"   alt="">
+                  <div class="card-body">
+                     <div class="overlay">
+                           <h5 class="card-title">Змейка </h5>
+                           <p class="card-text">Кормите змейку вкусняшками, но будьте осторожны - не врежтесь в стены или себя.</p>
+                           <button class="play point" data-toggle="modal" data-target="#modal10">Играть
+                           </button>
+                           
+                     </div>
+                  </div> 
                </div>
             </div>
+            </a>
          </div>
 
-         <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-               <img src="img/rects.jpg" width="80" height="140" class="card-img-top" alt="...">
-               <div class="card-body">
-                  <h5 class="card-title">Квадраты </h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Играть</a>
+         <div class="col-md-4 "> 
+            <a href="#" >
+            <div class="card">
+               <div class="hover ehover10">
+                  <img class="card-img-top" width="80" height="140" src="/img/tetris.jpg" alt="">
+                  <div class="card-body">
+                     <div class="overlay">
+                           <h5 class="card-title">Тетрис </h5>
+                           <p class="card-text">Складывайте фигурки вряд, чтобыsssssssssssssssssssssssssss они уничтожались. Главное - не выйти за предлы экрана</p>
+                           <button class="play point" data-toggle="modal" data-target="#modal10">Играть
+                           </button>
+                           
+                     </div>
+                  </div> 
                </div>
             </div>
+            </a>
          </div>
          
+         <div class="col-md-4">
+            <div class="card">
+               <img src="img/rects.jpg" width="80" height="140" class="card-img-top" alt="...">
+               <div class="card-body">
+                  <h5 class="card-title">Квадраты </h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Играть</a>
+               </div>
+            </div>
+         </div>
+
       </class>
    </div>
 </body>
@@ -94,4 +137,10 @@
   </ul> 
   </div>
 </nav>
+
+
+<button class="info" data-toggle="modal" data-target="#modal10">Show
+                     </button>
+
+<a href="#" class="btn btn-primary black-background">Играть</a>
  -->

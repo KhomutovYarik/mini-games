@@ -24,5 +24,206 @@
     }
     
 .card{
-    margin-top: 1em;
+    margin-top: 2em;
+    width: 17rem;
+
 }
+.card-text{
+    font-size: 14px;
+}
+
+/*наплывание*/
+.hover {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+  }
+  
+  .hover .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .hover img {
+    display: block;
+    position: relative;
+  }
+  
+  .hover h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .hover button.play {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    color: rgb(255, 255, 255);
+    border: 1px solid;
+    bottom: 0;
+    border-radius: 3px;
+    background-color: #41b811d5; 
+    position: absolute;
+    bottom: 5%;
+  }
+  
+  .hover button.play:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+  
+  .hover button.nullbutton {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .hover button.nullbutton:hover {
+    box-shadow: none;
+  }
+    
+  .modal-open .modal, button:focus {
+      outline:none!important
+  }
+  
+  .point {
+  cursor: pointer;
+  }
+
+  
+  .ehover10 img {
+      -webkit-transition: -webkit-transform 0.35s;
+      transition: transform 0.35s;
+  }
+  .ehover10:hover img {
+  -webkit-transform: translate3d(0,-10%,0);
+      transform: translate3d(0,-10%,0);
+  }
+  
+  .ehover10 .overlay {
+      top: auto;
+      bottom: 0;
+      padding: 1em;
+      padding-top: 0.7em;
+      height: 100%;
+      background: #fbfffe;
+      color: #050405;
+      text-align: left;
+      -webkit-transition: -webkit-transform 0.35s;
+      transition: transform 0.35s;
+      -webkit-transform: translate3d(0,75%,0);
+      transform: translate3d(0,75%,0);
+  }
+  
+  .ehover10 button.info
+   {
+      margin: 0px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 17px;
+      background: rgba(221, 16, 16, 0.6);
+  
+  }
+  
+  .ehover10 p.icon-links a {
+      float: right;
+      color: #ec1010;
+      font-size: 1.4em;
+  }
+  
+  .ehover10:hover p.icon-links a:hover,
+  .ehover10:hover p.icon-links a:focus {
+      color: #252d31;
+  }
+  
+  .ehover10 button,
+  .ehover10 p.icon-links a {
+      -webkit-transition: -webkit-transform 0.35s;
+      transition: transform 0.35s;
+      -webkit-transform: translate3d(0,200%,0);
+      transform: translate3d(0,200%,0);
+  }
+  
+  .ehover10 p.icon-links a span::before {
+      display: inline-block;
+      padding: 8px 10px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  
+  
+  .ehover10:hover .overlay,
+  .ehover10:hover button,
+  .ehover10:hover p.icon-links a {
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+  }
+  
+  .ehover10:hover h2 {
+      -webkit-transition-delay: 0.05s;
+      transition-delay: 0.05s;
+  }
+  
+  .ehover10:hover p.icon-links a:nth-child(3) {
+      -webkit-transition-delay: 0.1s;
+      transition-delay: 0.1s;
+  }
+  
+  .ehover10:hover p.icon-links a:nth-child(2) {
+      -webkit-transition-delay: 0.15s;
+      transition-delay: 0.15s;
+  }
+  
+  .ehover10:hover p.icon-links a:first-child {
+      -webkit-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+  }
+  
+
+
+    /* авторизация */
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
