@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <!-- navbar -->  
@@ -18,9 +18,9 @@
      </button>
      <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
       <li class="nav-item">
-          <a class="nav-link" data-value="login" href="/">Войти</a></li>  <!-- модальное окно входа -->
+          <span class="nav-link" onclick="document.getElementById('id01').style.display='block'" data-value="login">Войти</span></li>  <!-- модальное окно входа -->
       <li class="nav-item">
-         <a class="nav-link" data-value="login" href="/registration.php">Зарегестрироваться</a>        </li>  
+         <a class="nav-link" data-value="register" href="/registration.php">Зарегестрироваться</a>        </li>  
      <li class="nav-item"> 
       <a class="nav-link " data-value="contact" href="/about.html">Контаты</a></li> 
      </ul> 
@@ -120,6 +120,46 @@
 
       </class>
    </div>
+
+
+   <div id="id01" class="modalAuth">
+  
+      <form class="modal-auth animate" action="/auth.php">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+          <img src="img/brand-mini.png" alt="MGames" class="avatar">
+        </div>
+    
+        <div class="containerAuth">
+          <label for="uname"><b>Логин</b></label>
+          <input type="text" placeholder="Введите логин" name="uname" required>
+    
+          <label for="psw"><b>Пароль</b></label>
+          <input type="password" placeholder="Введите пароль" name="psw" required>
+            
+          <button name="AuthButton "type="submit" class="btn btn-lg btn-success btn-block">Войти</button>
+          
+        </div>
+    
+        <div class="containerAuth" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-lg btn-danger">Отмена</button>
+          <button type="button" onclick="" class="psw btn btn-lg btn-info ">Регистрация</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+
+
 </body>
 </html>
 

@@ -79,23 +79,16 @@
    <!-- информация -->  
    <body class="text-center">
     <form method="post" class="form-signin">
-  <img class="mb-4" width="300" src="img/brand.png" alt="" >
-  <h1 class="h3 mb-3 font-weight-normal">Регистрация</h1>
-    <label for="inLogin" class="sr-only">Логин</label>
-    <input type="text" name="inputLogin" id="inLogin" class="form-control" placeholder="Логин" required autofocus>
-  <label for="inputPass" class="sr-only">Пароль</label>
-  <input type="password" name="inputPassword" id="inputPass" class="form-control" placeholder="Пароль" required>
-  <label for="inputSecondPass" class="sr-only">Повторите пароль</label>
-  <input type="password" id="inputSecondPass" name="inputSecondPassword" class="form-control" placeholder="Повторите Пароль" required>
- 
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Запомнить меня
-    </label>
-  </div>
-  <input type="submit" name="regButton" class="next action-button" id="reg" value="Зарегистрироваться" />
-  <button id="regButto" class="btn btn-lg btn-primary btn-block" type="submit">Зарегестрироваться</button>
-</form>
+      <img class="mb-4" width="300" src="img/brand.png" alt="" >
+      <h1 class="h3 mb-3 font-weight-normal">Регистрация</h1>
+      <label for="inLogin" class="sr-only">Логин</label>
+      <input type="text" name="inputLogin" id="inLogin" class="form-control" placeholder="Логин" required autofocus>
+      <label for="inputPass" class="sr-only">Пароль</label>
+      <input type="password" name="inputPassword" id="inputPass" class="form-control" placeholder="Пароль" required>
+      <label for="inputSecondPass" class="sr-only">Повторите пароль</label>
+      <input type="password" id="inputSecondPass" name="inputSecondPassword" class="form-control" placeholder="Повторите Пароль" required>
+      <button id="regButt" name="regButton" class="btn btn-lg btn-primary btn-block" type="submit">Зарегестрироваться</button>
+    </form>   
 </body>
 </html>
 
@@ -115,4 +108,7 @@
   </ul> 
   </div>
 </nav>
+
+  <input type="submit" name="regButton" class="next action-button" id="reg" value="Зарегистрироваться" />
+
  -->

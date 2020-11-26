@@ -1,3 +1,6 @@
+body{
+  background-color: rgb(235, 227, 227);
+}
 .navbar{
     background:#F97300;
     }
@@ -5,13 +8,14 @@
     color: #f4f4f4;
     cursor: pointer;
     }
+
 .nav-link{
     margin-right: 1em !important;
     }
 .nav-link:hover{
     background: #f4f4f4; 
     color: #f97300; 
-    border-radius: 10%;
+    border-radius: 5%;
     }    
 .navbar-collapse{
     justify-content: flex-end;
@@ -27,6 +31,10 @@
     margin-top: 2em;
     width: 17rem;
 
+}
+
+.btn-primary{
+  background-color: #F97300 !important;
 }
 .card-text{
     font-size: 14px;
@@ -75,7 +83,7 @@
     border: 1px solid;
     bottom: 0;
     border-radius: 3px;
-    background-color: #41b811d5; 
+    background-color: #F97300; 
     position: absolute;
     bottom: 5%;
   }
@@ -194,7 +202,7 @@
   
 
 
-    /* авторизация */
+    /* регистрация */
 
 
 .form-signin {
@@ -227,3 +235,100 @@
   border-top-right-radius: 0;
 }
 
+
+
+
+ /* авторизация */
+
+ input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 0px 0 0 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 50%;
+}
+
+.containerAuth {
+  padding: 15px;
+}
+
+span.psw, button.psw {
+  float: right;
+}
+
+
+.modalAuth {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-auth {
+  background-color: #fefefe;
+  margin: auto auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
