@@ -1,10 +1,10 @@
 <?php
-	// Константы базы данных
-	define("DB_SERVER", "localhost");
-	define("DB_USER", "id15324306_root");
-	define("DB_PASS", "0mTq}yoh2sJ7E5N%");
-    define("DB_NAME", "id15324306_mini_games");
-    
+  // Константы базы данных
+  define("DB_SERVER", "127.0.0.1:3306");
+  define("DB_USER", "root");
+  define("DB_PASS", "");
+    define("DB_NAME", "mini_games");
+
     function getGUID(){
         if (function_exists('com_create_guid')){
             return com_create_guid();
@@ -12,7 +12,7 @@
             mt_srand((double)microtime()*10000);
             $charid = strtoupper(md5(uniqid(rand(), true)));
             $hyphen = chr(45);
-            $uuid = 
+            $uuid =
                 substr($charid, 0, 8).$hyphen
                 .substr($charid, 8, 4).$hyphen
                 .substr($charid,12, 4).$hyphen
@@ -21,4 +21,4 @@
             return $uuid;
         }
     }
-	?>
+  ?>

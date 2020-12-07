@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 05 2020 г., 15:32
+-- Время создания: Дек 08 2020 г., 02:42
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.1.32
 
@@ -55,8 +55,9 @@ CREATE TABLE `records` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `login` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hash` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `salt` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL
+  `hash` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `salt` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cookie` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -98,7 +99,7 @@ ALTER TABLE `games`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
