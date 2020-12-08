@@ -99,8 +99,8 @@
                      <div class="overlay">
                            <h5 class="card-title">Квадраты </h5>
                            <p class="card-text">Веселые квардраты</p>
-                           <button class="play point" data-toggle="modal" data-target="#modal10">Играть
-                           </button>
+                           <a href="squares/squares.html"><button class="play point" data-toggle="modal" data-target="#modal10">Играть
+                           </button></a>
 
                      </div>
                   </div>

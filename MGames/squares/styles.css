@@ -1,0 +1,84 @@
+body
+{
+  background-color: lightyellow;
+}
+
+#game-start
+{
+  font-size: 20px;
+}
+
+.info
+{
+  margin-top: 260px;
+  margin-left: 330px;
+  float: left;
+}
+
+.square
+{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  float: right;
+  margin-right: 260px;
+  margin-top: 85px;
+}
+
+.square-row
+{
+  display: flex;
+  flex-basis: 50%;
+}
+
+.square-cell
+{
+  flex-basis: 50%;
+}
+
+.square-cell:not(:first-child)
+{
+  border-left: 2px solid lightgray;
+}
+
+.square-row:not(:last-child)
+{
+  border-bottom: 2px solid lightgray;
+}
+
+.info button
+{
+  margin-top: -20px;
+  font-size: 15px;
+}
+
+#restart
+{
+  display: none;
+  margin-left: 34px;
+}
+
+#bot
+{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.Time
+{
+  margin-left: -30px;
+  margin-top: -10px;
+  font-size: 20px;
+}
+
+#timer
+{
+  margin-left: 0px;
+}
+
+#lvl
+{
+  font-size: 30px;
+}
