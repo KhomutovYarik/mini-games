@@ -49,7 +49,7 @@
         <li class="nav-item">
           <span class="nav-link" >Добро пожаловать, <?php echo $_SESSION['login']; ?></span></li>
           <li class="nav-item">
-          <a href="php/logout.php" id="logout" class="nav-link" >Выйти</a></li>
+          <a href="../php/logout.php" id="logout" class="nav-link" >Выйти</a></li>
          <?php } else { ?>
          <li class="nav-item">
           <span class="nav-link" onclick="document.getElementById('modal-auth').style.display='block'" data-value="login">Войти</span></li>  <!-- модальное окно входа -->
