@@ -40,7 +40,7 @@
     <!-- navbar -->
 <header>
    <nav class="navbar navbar-expand-lg  ">  <!--fixed-top-->
-      <a class="navbar-brand" href="#">MGames</a>
+      <a class="navbar-brand" href="index.php">MGames</a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
      </button>
@@ -54,7 +54,7 @@
          <li class="nav-item">
           <span class="nav-link" onclick="document.getElementById('modal-auth').style.display='block'" data-value="login">Войти</span></li>  <!-- модальное окно входа -->
       <li class="nav-item">
-         <a class="nav-link" data-value="register" href="/registration.php">Зарегистрироваться</a>
+         <a class="nav-link" data-value="register" href="../registration.php">Зарегистрироваться</a>
       </li>
          <?php } ?>
 <!--
@@ -99,7 +99,7 @@
                      <div class="overlay">
                            <h5 class="card-title">Квадраты </h5>
                            <p class="card-text">Веселые квардраты</p>
-                           <a href="squares/squares.html"><button class="play point" data-toggle="modal" data-target="#modal10">Играть
+                           <a href="squares/squares.php"><button class="play point" data-toggle="modal" data-target="#modal10">Играть
                            </button></a>
 
                      </div>
