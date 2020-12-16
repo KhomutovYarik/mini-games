@@ -27,62 +27,54 @@
 
 
 ?>
-<!DOCTYPE HTML>
- <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Квадраты</title>
-    <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Тетрис</title>
+  <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-   <header>
-   <nav class="navbar navbar-expand-lg  ">  <!--fixed-top-->
-      <a class="navbar-brand" href="../index.php">MGames</a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
-     <?php if ($_SESSION['auth']) {?>
-        <li class="nav-item">
-          <span class="nav-link" >Добро пожаловать, <?php echo $_SESSION['login']; ?></span></li>
-          <li class="nav-item">
-          <a href="../php/logout.php" id="logout" class="nav-link" >Выйти</a></li>
-         <?php } else { ?>
+</head>
+
+<body>
+  <!--navbar-->
+  <header>
+    <nav class="navbar navbar-expand-lg  ">  <!--fixed-top-->
+       <a class="navbar-brand" href="../index.php">MGames</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
+      <?php if ($_SESSION['auth']) {?>
          <li class="nav-item">
-          <span class="nav-link" onclick="document.getElementById('modal-auth').style.display='block'" data-value="login">Войти</span></li>  <!-- модальное окно входа -->
+           <span class="nav-link" >Добро пожаловать, <?php echo $_SESSION['login']; ?></span></li>
+           <li class="nav-item">
+           <a href="../php/logout.php" id="logout" class="nav-link" >Выйти</a></li>
+          <?php } else { ?>
+          <li class="nav-item">
+           <span class="nav-link" onclick="document.getElementById('modal-auth').style.display='block'" data-value="login">Войти</span></li>  <!-- модальное окно входа -->
+       <li class="nav-item">
+          <a class="nav-link" data-value="register" href="/registration.php">Зарегистрироваться</a>
+       </li>
+          <?php } ?>
+ <!--
       <li class="nav-item">
-         <a class="nav-link" data-value="register" href="/registration.php">Зарегистрироваться</a>
-      </li>
-         <?php } ?>
-<!--
-     <li class="nav-item">
-      <a class="nav-link " data-value="contact" href="/about.html">Контаты</a></li>
-      <li class="nav-item">
-         <a class="nav-link " data-value="test" href="/test.html">ТЕСТ</a></li>
--->
-     </ul>
-     </div>
-   </nav>
-</header>
-    <div id="main-game">
-       <img id="reload-game" src="../img/reload.png" title="Перезапустить игру">
-       <div class="game-block">
-        <div class="info">
-          <pre id="lvl">Уровень: 1</pre>
-          <div class="Time">
-            <span>Оставшееся время:</span>
-            <span id="timer">5 секунд</span>
-          </div>
-        </div>
-        <div class="square">
+       <a class="nav-link " data-value="contact" href="/about.html">Контаты</a></li>
+       <li class="nav-item">
+          <a class="nav-link " data-value="test" href="/test.html">ТЕСТ</a></li>
+ -->
+      </ul>
       </div>
-      </div>
-    </div>
-    <div id="game-over" class="modalAuth">
+    </nav>
+ </header>
+
+  <!-- окно игры тетрис -->
+<div id="main-game">
+ <img id="reload-game" src="../img/reload.png" title="Перезапустить игру">
+ <canvas width="225" height="450" id="game"></canvas>
+  </div>
+  <div id="game-over" class="modalAuth">
       <div id="game-over-form">
         <div class="game-over-label">Игра окончена</div>
         <div class="form-label">Ваш счёт: <span id="score"></span></div>
@@ -91,15 +83,15 @@
           if (!empty($_SESSION['auth']) && $_SESSION['auth']){
             $user_id = $_SESSION['id'];
 
-            $query = "select value from records where user_id = $user_id and game_id = 2";
+            $query = "select value from records where user_id = $user_id and game_id = 1";
 
             $result = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($result) > 0)
               echo mysqli_fetch_row($result)[0];
           }
-          else if (!empty($_SESSION['squares']))
-              echo $_SESSION['squares'];
+          else if (!empty($_SESSION['tetris']))
+              echo $_SESSION['tetris'];
           else
             echo '0';
 
@@ -108,7 +100,7 @@
         <button class="restart" id="restart">Начать заново</button>
       </div>
     </div>
-    <div id="modal-auth" class="modalAuth">
+  <div id="modal-auth" class="modalAuth">
 
       <form class="modal-auth animate" action="auth.php" method="POST">
         <div class="imgcontainer">
@@ -133,12 +125,12 @@
         </div>
       </form>
     </div>
-    <div id="dialog">
+  <div id="dialog">
       <pre class="dialog-text"></pre>
-    </div>
-    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+  </div>
+  <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="../js/auth.js"></script>
-    <script src="scripts.js"></script>
-  </body>
+  <script src="scripts.js"></script>
+</body>
 </html>

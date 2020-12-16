@@ -68,7 +68,10 @@
      </div>
    </nav>
 </header>
-  <canvas id="main-game" width="608" height="608"></canvas>
+   <div id="main-game">
+   <img id="reload-game" src="../img/reload.png" title="Перезапустить игру">
+    <canvas id="game-canvas" width="608" height="608"></canvas>
+  </div>
   <div id="game-over" class="modalAuth">
       <div id="game-over-form">
         <div class="game-over-label">Игра окончена</div>

@@ -1,4 +1,5 @@
-const canvas = document.getElementById('main-game');
+const theGame = document.getElementById('main-game');
+const canvas = document.getElementById('game-canvas');
 const ctx = canvas.getContext("2d");
 var gameOver = document.getElementById('game-over');
 var score = document.getElementById('score');
@@ -41,7 +42,7 @@ function direction(event) {
 function eatTail(head, arr) {
   for(let i = 0; i < arr.length; i++) {
     if(head.x == arr[i].x && head.y == arr[i].y)
-      clearInterval(game);
+      lose();
   }
 }
 
@@ -74,20 +75,7 @@ function drawGame() {
   if(snakeX < box || snakeX > box * 17
     || snakeY < 3 * box || snakeY > box * 17)
     {
-      clearInterval(game);
-      score.textContent = levelnumber
-      if (levelnumber > recordNumber){
-        recordNumber = levelnumber
-        record.textContent = recordNumber
-        $.ajax({
-      url: '../php/newrecord.php',
-      type: 'POST',
-      data: ({game: 3, record: recordNumber}),
-      dataType: 'html'
-    })
-      }
-      canvas.style.display = "none"
-      gameOver.style.display = "block"
+      lose();
     }
 
   if(dir == "left") snakeX -= box;
@@ -106,7 +94,7 @@ function drawGame() {
 }
 
 function start(){
-  canvas.style.display = "block"
+  theGame.style.display = "block"
   gameOver.style.display = "none"
   levelnumber = 0;
   food = {
@@ -119,8 +107,26 @@ function start(){
       y: 10 * box
     };
   dir = ""
+  clearInterval(game)
   game = setInterval(drawGame, 150);
   }
+
+function lose(){
+  clearInterval(game);
+      score.textContent = levelnumber
+      if (levelnumber > recordNumber){
+        recordNumber = levelnumber
+        record.textContent = recordNumber
+        $.ajax({
+      url: '../php/newrecord.php',
+      type: 'POST',
+      data: ({game: 3, record: recordNumber}),
+      dataType: 'html'
+    })
+      }
+      theGame.style.display = "none"
+      gameOver.style.display = "block"
+}
 
 start();
 restart.onclick = start;

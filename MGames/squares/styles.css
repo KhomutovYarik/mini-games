@@ -1,19 +1,24 @@
+.game-block
+{
+  display: flex;
+  flex-direction: row;
+}
+
 .info
 {
   margin-top: 220px;
   margin-left: 190px;
-  float: left;
+  width: 230px;
 }
 
 .square
 {
+  margin-left: 100px;
   width: 500px;
   height: 500px;
   display: flex;
   flex-direction: column;
   border: 3px solid black;
-  float: right;
-  margin-right: 360px;
   margin-top: 45px;
 }
 

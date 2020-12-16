@@ -1,33 +1,4 @@
-  /*настройки стилей страницы*/
-
-  /*делаем чёрный фон и выравниваем всё по центру*/
-  .game-window {
-    margin-top: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-  /*толщина холста — 1 пиксель, белый цвет*/
   canvas {
     border: 1px solid black;
     background-color: black;
-  }
-  .tetriz {
-    display: grid;
-    grid-template-columns: 320px 200px;
-    border: 1px solid black;
-    background-color: rgba(235, 223, 223, 0.993);
-  }
-  .right-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .play-button {
-    background-color: #4caf50;
-    font-size: 20px;
-    margin-right: 20%;
-    padding: 15px 30px;
-    cursor: pointer;
   }

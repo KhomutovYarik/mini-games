@@ -73,7 +73,7 @@
       <class class="row">
 
          <div class="col-md-4 ">
-            <a href="#" >
+            <a href="tetris/tetris.php" >
             <div class="card">
                <div class="hover ehover10">
                   <img class="card-img-top" width="80" height="140" src="img/tetris.jpg" alt="">
