@@ -25,21 +25,21 @@
     }
   }
 
-
 ?>
-<!DOCTYPE HTML>
- <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Квадраты</title>
-    <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Змейка</title>
+  <link rel="stylesheet" href="../js/jquery-ui-1.12.1/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-   <header>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
    <nav class="navbar navbar-expand-lg  ">  <!--fixed-top-->
       <a class="navbar-brand" href="../index.php">MGames</a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,19 +68,8 @@
      </div>
    </nav>
 </header>
-    <div id="main-game">
-       <img id="reload-game" src="../img/reload.png" title="Перезапустить игру">
-      <div class="info">
-        <pre id="lvl">Уровень: 1</pre>
-        <div class="Time">
-          <span>Оставшееся время:</span>
-          <span id="timer">5 секунд</span>
-        </div>
-      </div>
-      <div class="square">
-      </div>
-    </div>
-    <div id="game-over" class="modalAuth">
+  <canvas id="main-game" width="608" height="608"></canvas>
+  <div id="game-over" class="modalAuth">
       <div id="game-over-form">
         <div class="game-over-label">Игра окончена</div>
         <div class="form-label">Ваш счёт: <span id="score"></span></div>
@@ -89,15 +78,15 @@
           if (!empty($_SESSION['auth']) && $_SESSION['auth']){
             $user_id = $_SESSION['id'];
 
-            $query = "select value from records where user_id = $user_id and game_id = 2";
+            $query = "select value from records where user_id = $user_id and game_id = 3";
 
             $result = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($result) > 0)
               echo mysqli_fetch_row($result)[0];
           }
-          else if (!empty($_SESSION['squares']))
-              echo $_SESSION['squares'];
+          else if (!empty($_SESSION['snake']))
+              echo $_SESSION['snake'];
           else
             echo '0';
 
@@ -106,7 +95,7 @@
         <button class="restart" id="restart">Начать заново</button>
       </div>
     </div>
-    <div id="modal-auth" class="modalAuth">
+  <div id="modal-auth" class="modalAuth">
 
       <form class="modal-auth animate" action="auth.php" method="POST">
         <div class="imgcontainer">
@@ -137,6 +126,6 @@
     <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../js/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="../js/auth.js"></script>
-    <script src="scripts.js"></script>
-  </body>
+  <script src="scripts.js"></script>
+</body>
 </html>

@@ -1,5 +1,7 @@
 <?php
 
+  require_once("includes/connection.php");
+
   session_start();
 
   if (empty($_SESSION['auth']) or !($_SESSION['auth'])) {
@@ -26,6 +28,8 @@
   }
   else
     header('Location: index.php');
+
+mysqli_close($connection);
 
 ?>
 

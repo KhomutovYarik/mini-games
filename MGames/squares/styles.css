@@ -1,12 +1,7 @@
-#game-start
-{
-  font-size: 20px;
-}
-
 .info
 {
-  margin-top: 260px;
-  margin-left: 330px;
+  margin-top: 220px;
+  margin-left: 190px;
   float: left;
 }
 
@@ -18,8 +13,8 @@
   flex-direction: column;
   border: 3px solid black;
   float: right;
-  margin-right: 260px;
-  margin-top: 85px;
+  margin-right: 360px;
+  margin-top: 45px;
 }
 
 .square-row
@@ -49,12 +44,6 @@
   font-size: 15px;
 }
 
-#restart
-{
-  display: none;
-  margin-left: 34px;
-}
-
 #bot
 {
   margin-left: 20px;
@@ -63,6 +52,7 @@
 
 .Time
 {
+  display: none;
   margin-left: -30px;
   margin-top: -10px;
   font-size: 20px;

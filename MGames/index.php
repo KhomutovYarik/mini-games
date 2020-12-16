@@ -56,7 +56,8 @@
       <li class="nav-item">
          <a class="nav-link" data-value="register" href="../registration.php">Зарегистрироваться</a>
       </li>
-         <?php } ?>
+         <?php }
+       mysqli_close($connection);?>
 <!--
      <li class="nav-item">
       <a class="nav-link " data-value="contact" href="/about.html">Контаты</a></li>
@@ -79,7 +80,7 @@
                   <div class="card-body">
                      <div class="overlay">
                            <h5 class="card-title">Тетрис </h5>
-                           <p class="card-text">Складывайте фигурки в ряд, чтобыsssssssssssssssssssssssssss они уничтожались. Главное - не выйти за пределы экрана</p>
+                           <p class="card-text">Складывайте фигурки в ряд, чтобы они уничтожались. Главное - не выйти за пределы экрана</p>
                            <button class="play point" data-toggle="modal" data-target="#modal10">Играть
                            </button>
 
@@ -98,7 +99,7 @@
                   <div class="card-body">
                      <div class="overlay">
                            <h5 class="card-title">Квадраты </h5>
-                           <p class="card-text">Веселые квардраты</p>
+                           <p class="card-text">Весёлые квадраты</p>
                            <a href="squares/squares.php"><button class="play point" data-toggle="modal" data-target="#modal10">Играть
                            </button></a>
 
@@ -117,45 +118,15 @@
                   <div class="card-body">
                      <div class="overlay">
                            <h5 class="card-title">Змейка </h5>
-                           <p class="card-text">Кормите змейку вкусняшками, но будьте осторожны - не врежтесь в стены или себя.</p>
-                           <button class="play point" data-toggle="modal" data-target="#modal10">Играть
-                           </button>
+                           <p class="card-text">Кормите змейку вкусняшками, но будьте осторожны - не врежтесь в стены или в себя</p>
+                           <a href="snake/snake.php"><button class="play point" data-toggle="modal" data-target="#modal10">Играть
+                           </button></a>
 
                      </div>
                   </div>
                </div>
             </div>
             </a>
-         </div>
-
-         <div class="col-md-4 ">
-            <a href="#" >
-            <div class="card">
-               <div class="hover ehover10">
-                  <img class="card-img-top" width="80" height="140" src="img/tetris.jpg" alt="">
-                  <div class="card-body">
-                     <div class="overlay">
-                           <h5 class="card-title">Тетрис </h5>
-                           <p class="card-text">Складывайте фигурки вряд, чтобыsssssssssssssssssssssssssss они уничтожались. Главное - не выйти за пределы экрана</p>
-                           <button class="play point" data-toggle="modal" data-target="#modal10">Играть
-                           </button>
-
-                     </div>
-                  </div>
-               </div>
-            </div>
-            </a>
-         </div>
-
-         <div class="col-md-4">
-            <div class="card">
-               <img src="img/rects.jpg" width="80" height="140" class="card-img-top" alt="...">
-               <div class="card-body">
-                  <h5 class="card-title">Квадраты </h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Играть</a>
-               </div>
-            </div>
          </div>
 
       </class>

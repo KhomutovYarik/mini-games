@@ -49,6 +49,8 @@
 
         setcookie('login', $login, time() + 60*60*24*365, '/');
         setcookie('key', $cookie, time() + 60*60*24*365, '/');
+
+        require_once("../includes/checkscores.php");
       }
 
       echo $status;
