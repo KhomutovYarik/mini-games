@@ -72,7 +72,12 @@
   <!-- окно игры тетрис -->
 <div id="main-game">
  <img id="reload-game" src="../img/reload.png" title="Перезапустить игру">
- <canvas width="225" height="450" id="game"></canvas>
+ <div class="game-block">
+        <div class="info">
+          <pre class="score">Счёт: <span id="score-label"></span></pre>
+        </div>
+        <canvas width="225" height="450" id="game"></canvas>
+  </div>
   </div>
   <div id="game-over" class="modalAuth">
       <div id="game-over-form">
