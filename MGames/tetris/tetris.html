@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Тетрис</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+  <!--navbar-->
+  <header>
+    <nav class="navbar navbar-expand-lg  ">  <!--fixed-top-->
+       <a class="navbar-brand" href="../index.php">MGames</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
+      <?php if ($_SESSION['auth']) {?>
+         <li class="nav-item">
+           <span class="nav-link" >Добро пожаловать, <?php echo $_SESSION['login']; ?></span></li>
+           <li class="nav-item">
+           <a href="../php/logout.php" id="logout" class="nav-link" >Выйти</a></li>
+          <?php } else { ?>
+          <li class="nav-item">
+           <span class="nav-link" onclick="document.getElementById('modal-auth').style.display='block'" data-value="login">Войти</span></li>  <!-- модальное окно входа -->
+       <li class="nav-item">
+          <a class="nav-link" data-value="register" href="/registration.php">Зарегистрироваться</a>
+       </li>
+          <?php } ?>
+ <!--
+      <li class="nav-item">
+       <a class="nav-link " data-value="contact" href="/about.html">Контаты</a></li>
+       <li class="nav-item">
+          <a class="nav-link " data-value="test" href="/test.html">ТЕСТ</a></li>
+ -->
+      </ul>
+      </div>
+    </nav>
+ </header>
+
+  <!-- окно игры тетрис -->
+  <div class="container">
+    <class class="row justify-content-md-center">
+      <div class="col"> <!-- исправить с таблицей -->
+        <div class ="game-window">
+            <div class="tetriz">
+              <canvas width="225" height="450" id="game"></canvas>
+              <div class="right-column">
+                <div>
+                  <h1>Тетрис</h1>
+                  <p>Счет: <span id="score">0</span></p>
+                </div>
+                <button onclick="start()" class="play-button">Новая игра</button>
+              </div>
+            </div>
+        </div>
+      </div>
+   </class>
+
+
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
