@@ -79,7 +79,7 @@
               <div class="right-column">
                 <div>
                   <h1>Тетрис</h1>
-                  <p>Счет: <span id="score">0</span></p>
+                  <p>Счет: <span id="score-label">0</span></p>
                 </div>
                 <button onclick="start()" class="play-button">Новая игра</button>
               </div>
