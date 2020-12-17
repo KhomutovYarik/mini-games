@@ -68,10 +68,53 @@
      </div>
    </nav>
 </header>
-   <div id="main-game">
+<div class="container">
+    <class class="row justify-content-md-center">
+        <div class="col-md-8">
+        <div id="main-game">
    <img id="reload-game" src="../img/reload.png" title="Перезапустить игру">
     <canvas id="game-canvas" width="608" height="608"></canvas>
   </div>
+    </div>
+  </div>
+         </div>
+       <div class="col-md-4 ">
+            <table class="table table-sm table-bordered">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>Имя</th>
+                    <th>Рекорд</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Ник</td>
+                    <td>Рекорд</td>
+                </tr>
+                <tr>
+                    <td>Ник</td>
+                    <td>Рекорд</td>
+                </tr>
+                <tr>
+                    <td>Ник</td>
+                    <td>Рекорд</td>
+                </tr>
+                <tr>
+                    <td>Ник</td>
+                    <td>Рекорд</td>
+                </tr>
+                <tr>
+                    <td>Ник</td>
+                    <td>Рекорд</td>
+                </tr>
+                </tbody>
+            </table>
+       </div>
+    </class>
+</div>
+
+
+   
   <div id="game-over" class="modalAuth">
       <div id="game-over-form">
         <div class="game-over-label">Игра окончена</div>

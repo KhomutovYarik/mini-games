@@ -261,7 +261,7 @@ body{
   cursor: pointer;
 }
 
-/* Center the image and position the close button */
+
 .imgcontainer {
   text-align: center;
   margin: 0px 0 0 0;
@@ -282,25 +282,25 @@ span.psw, button.psw {
 
 
 .modalAuth {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
   padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .modal-auth {
   background-color: #fefefe;
-  margin: auto auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: auto auto auto auto; 
   border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
+  width: 50%; 
 }
 
 /* The Close Button (x) */
